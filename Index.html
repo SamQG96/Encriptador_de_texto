@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="logica.js"></script>
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">Encriptador</h1>
+    </header>
+
+    <main>
+        <section class="principal">
+            <div class="contenedor-centrado">
+                <textarea name="encriptar" id="encriptar" class="textarea-izquierdo" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="contenedor-textarea-derecho">
+                    <textarea name="desencriptar" id="desencriptar" class="textarea-derecho"></textarea>
+                    <img src="./assets/Portada.png" id="imagen-derecho" class="imagen-superpuesta">
+                </div>
+            </div>
+            <div class="botones">
+                <button class="btn" onclick="asignarTextoElemento();">Encriptar</button>
+                <button class="btn" onclick="descifrar();">Desencriptar</button>
+                <button class="btn copiar" onclick="copiar();">Copiar</button>
+            </div>
+            <div class="solo-letras-minusculas">
+                Solo letras minúsculas y sin acentos
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>
