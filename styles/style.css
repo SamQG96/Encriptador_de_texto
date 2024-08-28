@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenido se centre verticalmente */
+    margin: 0;
+}
+
+header {
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #003366;
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px; /* Ajusta según el tamaño máximo deseado */
+}
+
+.contenedor-centrado {
+    display: flex;
+    flex-direction: row; /* Coloca los textareas en fila */
+    align-items: flex-start; /* Alinea los textareas en la parte superior */
+    margin-top: 20px;
+    justify-content: center; /* Centra los textareas horizontalmente */
+    gap: 20px; /* Espacio entre los textareas */
+}
+
+.textarea-izquierdo {
+    width: 500px;
+    height: 800px;
+}
+
+.contenedor-textarea-derecho {
+    position: relative;
+}
+
+.textarea-derecho {
+    width: 400px;
+    height: 800px;
+}
+
+.imagen-superpuesta {
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    top: 0;
+    left: 0;
+    background-image: url("../assets/Portada.png"); /* Ruta a la imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center;
+    display: block; /* Asegura que la imagen esté visible por defecto */
+}
+
+.textarea-derecho.oculto + .imagen-superpuesta {
+    display: none; /* Oculta la imagen cuando el textarea tiene la clase 'oculto' */
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-top: 20px;
+}
+
+.btn {
+    width: 328px;
+    height: 67px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0055a5;
+}
+
+.copiar {
+    width: 328px;
+}
+
+.solo-letras-minusculas {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+    text-align: center; /* Centra el texto */
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+}
+
+@media (max-width: 1200px ){ /*permite realizar cambios cuando se modifica el tamaño de la pantalla*/
+
+    .header{
+
+        padding: 10%;
+    }
+
+    .header__menu{
+
+        justify-content: center;
+    }
+
+    .presentacion{
+
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+
+        width: auto;
+    }
+}
